@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_go"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:background="#5352ed"
+        android:text="Go"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/prog_xp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progress="40"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prog_xp" />
+
+    <TextView
+        android:id="@+id/tv_xp"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="0XP"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prog_xp" />
+
+    <com.judemanutd.katexview.KatexView
+        android:id="@+id/tv_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/tv_score"
+        app:layout_constraintStart_toEndOf="@+id/tv_xp"
+        app:layout_constraintTop_toBottomOf="@+id/prog_xp" />
+
+<!-- Some other display options I was testing to write math symbols -->
+<!--    <TextView-->
+<!--        android:id="@+id/tv_question"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/tv_score"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/tv_xp"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/prog_xp"-->
+<!--        android:text="TextView"-->
+<!--        android:textSize="14sp"-->
+<!--        />-->
+
+<!--    <com.nishant.math.MathView-->
+<!--        android:id="@+id/tv_question"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/tv_score"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/tv_xp"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/prog_xp"-->
+<!--        />-->
+
+<!--    <io.github.kexanie.library.MathView-->
+<!--           android:id="@+id/tv_question"-->
+<!--           android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/tv_score"-->
+<!--           app:layout_constraintStart_toEndOf="@+id/tv_xp"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/prog_xp"-->
+<!--        >-->
+<!--    </io.github.kexanie.library.MathView>-->
+
+
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_question">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_answer0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:height="200dp"
+                android:background="#7bed9f"
+                android:text="Button"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btn_answer1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:height="200dp"
+                android:background="#ff6b81"
+                android:text="Button" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/btn_answer2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:height="200dp"
+                android:background="#ff7f50"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/btn_answer3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:height="200dp"
+                android:background="#70a1ff"
+                android:text="Button" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/tv_correct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+<!--   xp-->
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
